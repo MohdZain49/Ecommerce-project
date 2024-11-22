@@ -1,0 +1,29 @@
+.cartItemsContainer {
+  display: inline-block;
+  width: 64%;
+  padding-right: 20px;
+  border-right: 1px solid #eaeaec;
+  padding-top: 32px;
+  color: #282c3f;
+  font-size: 13px;
+  line-height: 1.42857143;
+}
+
+.cartPage {
+  width: 75%;
+  margin-left: 12.5%;
+  display: flex;
+}
+
+.btnPlaceOrder {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+  border-width: 0px;
+  padding: 10px 16px;
+  background-color: rgb(255, 63, 108);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

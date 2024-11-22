@@ -1,0 +1,60 @@
+.cartSummary {
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  padding: 24px 0 0 16px;
+  color: #282c3f;
+  font-size: 13px;
+  line-height: 1.42857143;
+}
+
+.cartDetailsContainer {
+  margin-bottom: 16px;
+}
+
+.priceHeader {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 24px 0 16px;
+  color: #535766;
+}
+
+.priceItem {
+  margin-bottom: 12px;
+  line-height: 16px;
+  font-size: 14px;
+  color: #282c3f;
+}
+
+.priceItemValue {
+  float: right;
+}
+
+.priceDetailBaseDiscount {
+  color: #03a685;
+}
+
+.priceFooter {
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeaec;
+  color: #3e4152;
+  line-height: 16px;
+}
+
+.btnPlaceOrder {
+  width: 100%;
+  background-color: rgb(29, 29, 72);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.placeOrderText {
+  text-align: center;
+}

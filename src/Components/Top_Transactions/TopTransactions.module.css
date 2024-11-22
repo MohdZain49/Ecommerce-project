@@ -1,0 +1,43 @@
+.topTransactionsContainer {
+  padding: 1rem;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+}
+
+.title {
+  text-align: center;
+  color: gray;
+  font-weight: 400;
+}
+
+.topTransactionsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader,
+.tableData {
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tableHeader {
+  font-weight: bold;
+}
+
+/* Status Styling */
+.statusCompleted {
+  color: green;
+}
+
+.statusPending {
+  color: orange;
+}
+
+.statusFailed {
+  color: red;
+}

@@ -1,0 +1,41 @@
+.customersContainer {
+  margin-left: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.customersTableContainer {
+  margin-top: 20px;
+}
+
+.customersTable {
+  border-collapse: collapse;
+}
+
+.customersTable tbody tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.358);
+}
+
+.customersTable th,
+.customersTable td {
+  text-align: left;
+  padding: 20px;
+}
+.customerImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Adjust container size */
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Optional background for better appearance */
+}
+
+.customerImg {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent distortion */
+}

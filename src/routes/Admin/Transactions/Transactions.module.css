@@ -1,0 +1,44 @@
+.transactionsContainer {
+  width: 100%;
+  background-color: white;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.transactionsTableContainer {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.transactionsTable {
+  border-collapse: collapse;
+}
+
+.transactionsTable th,
+.transactionsTable td {
+  text-align: left;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.transactionsTable tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.358);
+}
+
+.transactionsTable th {
+  color: gray;
+  font-weight: 500;
+}
+
+.manageUser {
+  width: 100px;
+  padding: 5px;
+  height: 30px;
+  background-color: rgba(0, 0, 255, 0.485);
+  color: rgb(3, 3, 227);
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}

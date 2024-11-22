@@ -1,0 +1,106 @@
+/* Dashboard.module.css */
+
+/* Container */
+.dashboardContainer {
+  overflow-y: auto;
+  width: 100%;
+  padding: 0 20px;
+ background-color: rgb(243, 243, 243);
+}
+
+/* Search Bar */
+.searchBar {
+  height: 3rem;
+  border-bottom: 1px solid rgb(166, 166, 166);
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.searchInput {
+  height: 100%;
+  border: none;
+  width: 70%;
+  background-color: rgb(243, 243, 243);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+/* Widgets Section */
+.widgetsSection {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Graph Section */
+.graphSection {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  margin: 20px 0;
+}
+
+.graphHeading {
+  text-align: center;
+  color: gray;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.dashboardGraphContainer {
+  background-color: white;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboardInventoryContainer {
+  border-radius: 10px;
+  background-color: white;
+  width: 30%;
+  margin-left: 20px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.genderTransactionSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.genderGraphContainer {
+  background-color: white;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.genderGraphHeading {
+  text-align: center;
+  color: gray;
+  font-weight: 400;
+}
+
+.genderGraph {
+  position: relative;
+  left: 50px;
+}
