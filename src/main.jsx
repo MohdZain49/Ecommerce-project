@@ -16,6 +16,10 @@ import {
   ManageProduct,
   ManageTransaction,
   Login,
+  CompletedTransactions,
+  InProgressTransactions,
+  PendingTransactions,
+  CancelledTransactions
 } from "./index.js";
 import appStore from "./store/index.js";
 
@@ -67,11 +71,30 @@ const router = createBrowserRouter([
           {
             path: "transactions",
             element: <Transactions />,
+            children: [
+              {
+                path: "completed-transactions",
+                element: <CompletedTransactions />,
+              },
+              {
+                path: "in-progress-transactions",
+                element: <InProgressTransactions />,
+              },
+              {
+                path: "pending-transactions",
+                element: <PendingTransactions />,
+              },
+              {
+                path: "cancelled-transactions",
+                element: <CancelledTransactions />,
+              },
+              {
+                path: "manage/:id",
+                element: <ManageTransaction />,
+              },
+            ],
           },
-          {
-            path: "transaction/manage/:id",
-            element: <ManageTransaction />,
-          },
+
           {
             path: "customers",
             element: <Customers />,
