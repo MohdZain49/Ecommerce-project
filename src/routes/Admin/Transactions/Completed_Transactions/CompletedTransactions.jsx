@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./CompletedTransactions.module.css";
-import data from "../../../../assets/data";
+import { useSelector } from "react-redux";
 
 function CompletedTransactions() {
-  const { transactions } = data;
+  const transactions = useSelector((state) => state.transactions);
+  const { completedTransactions } = transactions;
 
   return (
     <div className={styles.transactionsTableContainer}>
@@ -17,7 +18,7 @@ function CompletedTransactions() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => (
+          {completedTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.user}</td>
               <td>{transaction.amount}</td>

@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./InProgressTransactions.module.css";
-import data from "../../../../assets/data";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function InProgressTransactions() {
-  const { transactions } = data;
+  const transactions = useSelector((state) => state.transactions);
+  const { inProgressTransactions } = transactions;
   return (
     <div className={styles.transactionsTableContainer}>
       <table className={styles.transactionsTable}>
@@ -18,7 +19,7 @@ function InProgressTransactions() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => (
+          {inProgressTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.user}</td>
               <td>{transaction.amount}</td>

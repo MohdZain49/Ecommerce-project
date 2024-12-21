@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import logo from "../../assets/app_logo.jpg";
 import styles from "./Navbar.module.css";
 import { AiOutlineUser } from "react-icons/ai";
@@ -7,23 +6,27 @@ import { RiAdminLine } from "react-icons/ri";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { IoSearch } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 function NavBar() {
-  const cartItems = useSelector((store) => store.cart);
+  const cart = useSelector((store) => store.cart);
+  const [profileBtnClick, setProfileBtnClick] = useState(false);
 
   return (
     <nav className={styles.navbarContainer}>
-      <div className="logo-container">
+      <div className={styles.logoContainer}>
         <Link to="/home">
           <img src={logo} className={styles.appLogo} alt="app_logo" />
         </Link>
       </div>
+
       <div className={styles.navbar}>
-        <a href="">BEST SELLER</a>
+        <a href="">TRENDING</a>
         <a href="">NEW RELEASES</a>
         <a href="">HOME & LIVING</a>
-        <a href="">STUDIO</a>
+        <a href="">TOP DEALS</a>
       </div>
+
       <div className={styles.searchBar}>
         <div>
           <IoSearch />
@@ -36,12 +39,38 @@ function NavBar() {
       </div>
 
       <div className={styles.actionsBar}>
-        <div className={styles.actionContainer}>
-          <Link to={"/login"}>
+        <div className={`${styles.actionContainer} ${styles.profile}`}>
+          <div
+            className={styles.dropbtn}
+            onClick={() => setProfileBtnClick(!profileBtnClick)}
+          >
             <AiOutlineUser className={styles.icon} />
             <span className={styles.actionName}>profile</span>
-          </Link>
+          </div>
+          {profileBtnClick && (
+            <div className={styles.dropdownContent}>
+              <Link
+                to={"/login"}
+                onClick={() => setProfileBtnClick(!profileBtnClick)}
+              >
+                Login
+              </Link>
+              <Link
+                to={"/signUp"}
+                onClick={() => setProfileBtnClick(!profileBtnClick)}
+              >
+                SignUp
+              </Link>
+              <Link
+                to={"/orders"}
+                onClick={() => setProfileBtnClick(!profileBtnClick)}
+              >
+                Orders
+              </Link>
+            </div>
+          )}
         </div>
+
         <div className={styles.actionContainer}>
           <Link to={"/admin"}>
             <RiAdminLine className={styles.icon} />
@@ -49,8 +78,10 @@ function NavBar() {
           </Link>
         </div>
         <div className={`${styles.actionContainer} ${styles.cart}`}>
-          {cartItems?.length > 0 && (
-            <span className={styles.notification}>{cartItems.length}</span>
+          {cart.currentOrders.length > 0 && (
+            <span className={styles.notification}>
+              {cart.currentOrders.length}
+            </span>
           )}
           <Link to={"/cart"}>
             <PiShoppingCartSimpleBold />

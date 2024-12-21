@@ -11,7 +11,10 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  margin-bottom: 20px;
 }
 
 .tabButton {
@@ -28,47 +31,20 @@
   color: rgb(97, 96, 96);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-right: 50px;
+  cursor: pointer;
 }
 
-.tabButton:active {
- background-color: rgb(204, 200, 200);
+.tabButton:focus {
+  background-color: rgb(204, 200, 200);
   font-size: 16px;
 }
 
-.transactionsTableContainer {
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.transactionsTable {
-  border-collapse: collapse;
-}
-
-.transactionsTable th,
-.transactionsTable td {
-  text-align: left;
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  padding: 20px;
-}
-
-.transactionsTable tr {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.358);
-}
-
-.transactionsTable th {
-  color: gray;
-  font-weight: 500;
-}
-
-.manageUser {
-  width: 100px;
-  padding: 5px;
-  height: 30px;
-  background-color: rgba(0, 0, 255, 0.485);
-  color: rgb(3, 3, 227);
-  text-align: center;
-  border: none;
-  border-radius: 5px;
+.transactionsContent {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  padding-left: 20px;
+  border-radius: 10px 0 0 0;
 }

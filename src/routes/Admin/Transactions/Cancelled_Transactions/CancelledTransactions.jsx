@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./CancelledTransactions.module.css";
-import data from "../../../../assets/data";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function CancelledTransactions() {
-  const { transactions } = data;
+  const transactions = useSelector((state) => state.transactions);
+  const { cancelledTransactions } = transactions;
   return (
     <div className={styles.transactionsTableContainer}>
       <table className={styles.transactionsTable}>
@@ -18,7 +19,7 @@ function CancelledTransactions() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => (
+          {cancelledTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.user}</td>
               <td>{transaction.amount}</td>

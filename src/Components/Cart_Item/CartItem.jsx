@@ -4,11 +4,20 @@ import { TiDelete } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cartSlice";
 
-function CartItem({ item }) {
+function CartItem({ item, status }) {
   const dispatch = useDispatch();
 
-  const handleRemoveItem = (id) => {
-    dispatch(cartActions.removeToCart(id));
+  const handleRemoveFromCart = (id) => {
+    dispatch(cartActions.removeFromCart(id));
+  };
+
+  const handleRemoveSavedOrders = (id) => {
+    dispatch(cartActions.removeSavedOrder(id));
+  };
+
+  const handleSaveForLater = (item) => {
+    dispatch(cartActions.saveOrder(item));
+    handleRemoveFromCart(item.id);
   };
 
   return (
@@ -39,12 +48,32 @@ function CartItem({ item }) {
           </span>
         </div>
       </div>
-      <div
-        className={styles.removeFromCart}
-        onClick={() => handleRemoveItem(item.id)}
-        role="button"
-      >
-        <TiDelete />
+      <div className={styles.buttonsSection}>
+        {status === "current-orders" && (
+          <button
+            className={styles.cartButton}
+            onClick={() => handleSaveForLater(item)}
+          >
+            {" "}
+            Save for later
+          </button>
+        )}
+        {status === "current-orders" && (
+          <button
+            className={styles.cartButton}
+            onClick={() => handleRemoveFromCart(item.id)}
+          >
+            Remove
+          </button>
+        )}
+        {status === "saved-orders" && (
+          <button
+            className={styles.cartButton}
+            onClick={() => handleRemoveSavedOrders(item.id)}
+          >
+            Remove
+          </button>
+        )}
       </div>
     </div>
   );

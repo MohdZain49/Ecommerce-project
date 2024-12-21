@@ -1,0 +1,68 @@
+.orderCard {
+    margin:  40px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.169);
+}
+
+.orderCardHeader {
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    background-color: #e3e3e4;
+
+}
+
+.orderCardHeader h4 {
+    color: #282c3f;
+}
+
+
+.orderCardHeader p {
+    color: #282c3fcb;
+    font-size: 14px;
+}
+
+
+.headerEntity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderImage {
+    height: 100px;
+    margin: 0 20px;
+    margin-right: 50px;
+}
+
+.orderCardDetails {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+}
+
+.returnPeriod {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #282c3f9d;
+}
+
+.orderCardActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.orderCardActions button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #282c3f;
+    border-radius: 20px;
+    background-color: #282c3f29;
+    cursor: pointer;
+    width: 250px;
+}

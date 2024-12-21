@@ -2,11 +2,12 @@
 
 import React from "react";
 import styles from "./PendingTransactions.module.css";
-import data from "../../../../assets/data";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function PendingTransactions() {
-  const { transactions } = data;
+  const transactions = useSelector((state) => state.transactions);
+  const { pendingTransactions } = transactions;
   return (
     <div className={styles.transactionsTableContainer}>
       <table className={styles.transactionsTable}>
@@ -20,7 +21,7 @@ function PendingTransactions() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => (
+          {pendingTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.user}</td>
               <td>{transaction.amount}</td>

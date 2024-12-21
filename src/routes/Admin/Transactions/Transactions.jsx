@@ -19,7 +19,9 @@ function Transactions() {
           Cancelled
         </Link>
       </div>
-      <Outlet />
+      <div className={styles.transactionsContent}>
+        <Outlet />
+      </div>
     </div>
   );
 }

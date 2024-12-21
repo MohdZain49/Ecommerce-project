@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "./CartSummary.module.css";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { ordersSliceActions } from "../../store/ordersSlice";
+import { cartActions } from "../../store/cartSlice";
 
 function CartSummary({ cartItems }) {
   let totalItem = cartItems.length;
@@ -11,8 +15,14 @@ function CartSummary({ cartItems }) {
     totalMRP += cartItem.original_price;
     totalDiscount += cartItem.original_price - cartItem.current_price;
   });
+  let finalPayment = totalMRP - totalDiscount;
 
-  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+  const dispatch = useDispatch();
+
+  const handlePlaceOrder = (placedOrder) => {
+    dispatch(ordersSliceActions.placedOrders(placedOrder));
+    dispatch(cartActions.emptyCart());
+  };
 
   return (
     <div className={styles.cartSummary}>
@@ -34,7 +44,9 @@ function CartSummary({ cartItems }) {
         </div>
         <div className={styles.priceItem}>
           <span className={styles.priceItemTag}>Convenience Fee</span>
-          <span className={styles.priceItemValue}>₹{CONVENIENCE_FEES}</span>
+          <span className={styles.priceItemValue}>
+            ₹{cartItems.length === 0 ? "0" : CONVENIENCE_FEES}
+          </span>
         </div>
         <hr />
         <div className={styles.priceFooter}>
@@ -42,9 +54,15 @@ function CartSummary({ cartItems }) {
           <span className={styles.priceItemValue}>₹{finalPayment}</span>
         </div>
       </div>
-      <button className={styles.btnPlaceOrder}>
-        <div className={styles.placeOrderText}>PLACE ORDER</div>
-      </button>
+      {cartItems.length > 0 && (
+        <Link
+          to="/orders"
+          className={styles.btnPlaceOrder}
+          onClick={() => handlePlaceOrder(cartItems)}
+        >
+          PLACE ORDER
+        </Link>
+      )}
     </div>
   );
 }

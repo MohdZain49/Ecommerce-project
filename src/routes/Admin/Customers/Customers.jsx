@@ -16,7 +16,7 @@ function Customers() {
               <th>Name</th>
               <th>Gender</th>
               <th>Email</th>
-              <th>Role</th>
+              {/* <th>Role</th> */}
               <th>Action</th>
             </tr>
           </thead>
@@ -35,7 +35,7 @@ function Customers() {
                 <td>{customer.name}</td>
                 <td>{customer.gender}</td>
                 <td>{customer.email}</td>
-                <td>{customer.role}</td>
+                {/* <td>{customer.role}</td> */}
                 <td>
                   <MdDelete />
                 </td>

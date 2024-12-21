@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import {
   Home,
   Cart,
+  Orders,
   Admin,
   Dashboard,
   Products,
@@ -16,10 +17,11 @@ import {
   ManageProduct,
   ManageTransaction,
   Login,
+  Signup,
   CompletedTransactions,
   InProgressTransactions,
   PendingTransactions,
-  CancelledTransactions
+  CancelledTransactions,
 } from "./index.js";
 import appStore from "./store/index.js";
 
@@ -41,8 +43,16 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
+        path: "orders",
+        element: <Orders />,
+      },
+      {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "signUp",
+        element: <Signup />,
       },
       {
         path: "admin",
@@ -73,6 +83,10 @@ const router = createBrowserRouter([
             element: <Transactions />,
             children: [
               {
+                index: true,
+                element: <CompletedTransactions />,
+              },
+              {
                 path: "completed-transactions",
                 element: <CompletedTransactions />,
               },
@@ -89,12 +103,11 @@ const router = createBrowserRouter([
                 element: <CancelledTransactions />,
               },
               {
-                path: "manage/:id",
+                path: ":transaction-type/manage/:id",
                 element: <ManageTransaction />,
               },
             ],
           },
-
           {
             path: "customers",
             element: <Customers />,
