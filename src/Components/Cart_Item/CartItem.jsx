@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CartItem.module.css";
 import { TiDelete } from "react-icons/ti";
 import { useDispatch } from "react-redux";
-import { cartActions } from "../../store/cartSlice";
+import { cartActions } from "../../store/Main/cartSlice";
 
 function CartItem({ item, status }) {
   const dispatch = useDispatch();

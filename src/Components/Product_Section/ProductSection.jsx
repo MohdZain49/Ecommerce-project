@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ProductSection.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { cartActions } from "../../store/cartSlice";
+import { cartActions } from "../../store/Main/cartSlice";
 
 function ProductSection() {
   const homeItems = useSelector((store) => store.home);

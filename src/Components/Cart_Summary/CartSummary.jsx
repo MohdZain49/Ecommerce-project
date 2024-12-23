@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./CartSummary.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { ordersSliceActions } from "../../store/ordersSlice";
-import { cartActions } from "../../store/cartSlice";
+import { ordersSliceActions } from "../../store/Main/ordersSlice";
+import { cartActions } from "../../store/Main/cartSlice";
 
 function CartSummary({ cartItems }) {
   let totalItem = cartItems.length;

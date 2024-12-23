@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../assets/data";
+import data from "../../assets/data";
 
 const { homeItems } = data;
 

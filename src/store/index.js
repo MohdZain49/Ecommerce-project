@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import homeSlice from "./homeSlice";
-import cartSlice from "./cartSlice";
-import dashboardSlice from "./dashboardSlice";
-import productsSlice from "./productsSlice";
+import homeSlice from "./Main/homeSlice";
+import cartSlice from "./Main/cartSlice";
+import dashboardSlice from "./Admin/dashboardSlice";
+import productsSlice from "./Admin/productsSlice";
 import transactionsSlice from "./Admin/transactionsSlice";
-import ordersSlice from "./ordersSlice";
+import ordersSlice from "./Main/ordersSlice";
 
 const appStore = configureStore({
   reducer: {

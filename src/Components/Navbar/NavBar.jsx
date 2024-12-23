@@ -21,10 +21,10 @@ function NavBar() {
       </div>
 
       <div className={styles.navbar}>
-        <a href="">TRENDING</a>
-        <a href="">NEW RELEASES</a>
-        <a href="">HOME & LIVING</a>
-        <a href="">TOP DEALS</a>
+        <Link>TRENDING</Link>
+        <Link>NEW RELEASES</Link>
+        <Link>HOME & LIVING</Link>
+        <Link>TOP DEALS</Link>
       </div>
 
       <div className={styles.searchBar}>
