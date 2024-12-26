@@ -20,6 +20,12 @@ function CartItem({ item, status }) {
     handleRemoveFromCart(item.id);
   };
 
+
+  const handleAddToCart = (item) => {
+    dispatch(cartActions.addToCart(item));
+    handleRemoveSavedOrders(item.id);
+   }
+
   return (
     <div className={styles.cartItemContainer}>
       <div className={styles.itemLeftPart}>
@@ -50,29 +56,37 @@ function CartItem({ item, status }) {
       </div>
       <div className={styles.buttonsSection}>
         {status === "current-orders" && (
-          <button
-            className={styles.cartButton}
-            onClick={() => handleSaveForLater(item)}
-          >
-            {" "}
-            Save for later
-          </button>
+          <div>
+            <button
+              className={styles.cartButton}
+              onClick={() => handleSaveForLater(item)}
+            >
+              Save for later
+            </button>
+            <button
+              className={styles.cartButton}
+              onClick={() => handleRemoveFromCart(item.id)}
+            >
+              Remove
+            </button>
+          </div>
         )}
-        {status === "current-orders" && (
-          <button
-            className={styles.cartButton}
-            onClick={() => handleRemoveFromCart(item.id)}
-          >
-            Remove
-          </button>
-        )}
+
         {status === "saved-orders" && (
-          <button
-            className={styles.cartButton}
-            onClick={() => handleRemoveSavedOrders(item.id)}
-          >
-            Remove
-          </button>
+          <div>
+            <button
+              className={styles.cartButton}
+              onClick={() => handleAddToCart(item)}
+            >
+              Move to cart
+            </button>
+            <button
+              className={styles.cartButton}
+              onClick={() => handleRemoveSavedOrders(item.id)}
+            >
+              Remove
+            </button>
+          </div>
         )}
       </div>
     </div>
