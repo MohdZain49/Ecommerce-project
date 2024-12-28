@@ -280,7 +280,7 @@ const data = {
   customers: [
     {
       id: 1,
-      profile: profile01,
+      profile: profile04,
       name: "John Doe",
       gender: "Male",
       email: "johndoe@example.com",
@@ -290,13 +290,13 @@ const data = {
       id: 2,
       profile: profile02,
       name: "Jane Smith",
-      gender: "Female",
+      gender: "Male",
       email: "janesmith@example.com",
       role: "User",
     },
     {
       id: 3,
-      profile: profile03,
+      profile: profile06,
       name: "Mike Johnson",
       gender: "Male",
       email: "mikejohnson@example.com",
@@ -304,7 +304,7 @@ const data = {
     },
     {
       id: 4,
-      profile: profile04,
+      profile: profile01,
       name: "Emily Brown",
       gender: "Female",
       email: "emilybrown@example.com",
@@ -312,15 +312,15 @@ const data = {
     },
     {
       id: 5,
-      profile: profile05,
+      profile: profile10,
       name: "Chris Lee",
-      gender: "Non-binary",
+      gender: "Male",
       email: "chrislee@example.com",
       role: "User",
     },
     {
       id: 6,
-      profile: profile06,
+      profile: profile03,
       name: "Laura Green",
       gender: "Female",
       email: "lauragreen@example.com",
@@ -352,7 +352,7 @@ const data = {
     },
     {
       id: 10,
-      profile: profile10,
+      profile: profile05,
       name: "Sophia Black",
       gender: "Female",
       email: "sophiablack@example.com",

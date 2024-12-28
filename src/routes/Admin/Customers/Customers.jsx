@@ -1,10 +1,17 @@
 import React from "react";
-import data from "../../../assets/data"; 
 import { MdDelete } from "react-icons/md";
 import styles from "./Customers.module.css"; 
+import { useSelector, useDispatch } from "react-redux";
+import { customersActions } from "../../../store/Admin/customersSlice";
 
 function Customers() {
-  const { customers } = data;
+  const customers = useSelector((state) => state.customers);
+  const dispatch = useDispatch();
+
+  const handleDeleteCustomer = (id) => { 
+    dispatch(customersActions.removeCustomer(id));
+  }
+
   return (
     <div className={styles.customersContainer}>
       <h2>Customers</h2>
@@ -36,8 +43,8 @@ function Customers() {
                 <td>{customer.gender}</td>
                 <td>{customer.email}</td>
                 {/* <td>{customer.role}</td> */}
-                <td>
-                  <MdDelete />
+                <td onClick={() => handleDeleteCustomer(customer.id)} >
+                  <MdDelete  />
                 </td>
               </tr>
             ))}

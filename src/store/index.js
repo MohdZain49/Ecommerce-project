@@ -5,6 +5,7 @@ import dashboardSlice from "./Admin/dashboardSlice";
 import productsSlice from "./Admin/productsSlice";
 import transactionsSlice from "./Admin/transactionsSlice";
 import ordersSlice from "./Main/ordersSlice";
+import customersSlice from "./Admin/customersSlice";
 
 const appStore = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const appStore = configureStore({
     products: productsSlice.reducer,
     transactions: transactionsSlice.reducer,
     orders: ordersSlice.reducer,
+    customers: customersSlice.reducer,
   },
 });
 
