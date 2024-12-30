@@ -21,7 +21,7 @@ function Customers() {
             <tr>
               <th>Profile</th>
               <th>Name</th>
-              <th>Gender</th>
+              <th>Transaction-ID</th>
               <th>Email</th>
               {/* <th>Role</th> */}
               <th>Action</th>
@@ -40,11 +40,11 @@ function Customers() {
                   </div>
                 </td>
                 <td>{customer.name}</td>
-                <td>{customer.gender}</td>
+                <td>{customer.transactionId}</td>
                 <td>{customer.email}</td>
                 {/* <td>{customer.role}</td> */}
-                <td onClick={() => handleDeleteCustomer(customer.id)} >
-                  <MdDelete  />
+                <td onClick={() => handleDeleteCustomer(customer.id)}>
+                  <MdDelete />
                 </td>
               </tr>
             ))}
