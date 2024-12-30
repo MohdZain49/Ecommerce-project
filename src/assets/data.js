@@ -186,7 +186,7 @@ const data = {
 
   transactions: [
     {
-      id: "trnx001",
+      id: "trxn-001-234-98",
       user: "Alice Johnson",
       amount: "$120.00",
       discount: "10%",
@@ -195,7 +195,7 @@ const data = {
       action: "View",
     },
     {
-      id: "trnx002",
+      id: "trxn-002-345-99",
       user: "Bob Smith",
       amount: "$75.00",
       discount: "5%",
@@ -204,7 +204,7 @@ const data = {
       action: "Edit",
     },
     {
-      id: "trnx003",
+      id: "trxn-003-456-00",
       user: "Charlie Brown",
       amount: "$200.00",
       discount: "15%",
@@ -213,7 +213,7 @@ const data = {
       action: "View",
     },
     {
-      id: "trnx004",
+      id: "trxn-004-567-01",
       user: "Diana Prince",
       amount: "$90.00",
       discount: "10%",
@@ -222,7 +222,7 @@ const data = {
       action: "Edit",
     },
     {
-      id: "trnx005",
+      id: "trxn-005-678-02",
       user: "Evan White",
       amount: "$60.00",
       discount: "0%",
@@ -231,7 +231,7 @@ const data = {
       action: "Delete",
     },
     {
-      id: "trnx006",
+      id: "trxn-006-789-03",
       user: "Fiona Green",
       amount: "$150.00",
       discount: "20%",
@@ -240,7 +240,7 @@ const data = {
       action: "View",
     },
     {
-      id: "trnx007",
+      id: "trxn-007-890-04",
       user: "George Black",
       amount: "$110.00",
       discount: "5%",
@@ -249,7 +249,7 @@ const data = {
       action: "Edit",
     },
     {
-      id: "trnx008",
+      id: "trxn-008-901-05",
       user: "Hannah Grey",
       amount: "$300.00",
       discount: "25%",
@@ -258,7 +258,7 @@ const data = {
       action: "View",
     },
     {
-      id: "trnx009",
+      id: "trxn-009-012-06",
       user: "Ian Brown",
       amount: "$85.00",
       discount: "5%",
@@ -267,7 +267,7 @@ const data = {
       action: "Edit",
     },
     {
-      id: "trnx010",
+      id: "trxn-010-123-07",
       user: "Jane Doe",
       amount: "$130.00",
       discount: "15%",

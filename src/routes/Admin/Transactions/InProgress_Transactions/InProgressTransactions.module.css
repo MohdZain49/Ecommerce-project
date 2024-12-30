@@ -31,35 +31,41 @@
 }
 
 .tabButton:active {
- background-color: rgb(204, 200, 200);
+  background-color: rgb(204, 200, 200);
   font-size: 16px;
 }
 
 .transactionsTableContainer {
   margin-top: 20px;
   margin-left: 20px;
+  overflow-x: auto;
 }
 
 .transactionsTable {
+  width: 100%;
   border-collapse: collapse;
+  text-align: left;
 }
 
 .transactionsTable th,
 .transactionsTable td {
-  text-align: left;
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  padding: 20px;
-}
-
-.transactionsTable tr {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.358);
+  padding: 12px 30px;
+  border: 1px solid #ddd;
+  min-width: auto; 
+  text-align: center;
 }
 
 .transactionsTable th {
-  color: gray;
-  font-weight: 500;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.transactionsTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactionsTable tr:hover {
+  background-color: #f1f1f1;
 }
 
 .manageUser {
@@ -71,4 +77,5 @@
   text-align: center;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }

@@ -12,6 +12,7 @@ function CancelledTransactions() {
         <thead>
           <tr>
             <th>User</th>
+            <th>Transaction-ID</th>
             <th>Amount</th>
             <th>Discount</th>
             <th>Quantity</th>
@@ -22,12 +23,13 @@ function CancelledTransactions() {
           {cancelledTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.user}</td>
+              <td>{transaction.id}</td>
               <td>{transaction.amount}</td>
               <td>{transaction.discount}</td>
               <td>{transaction.quantity}</td>
               <td>
                 <Link
-                  to={`manage/${transaction.id}`}
+                  // to={`manage/${transaction.id}`}
                   className={styles.manageUser}
                 >
                   manage
