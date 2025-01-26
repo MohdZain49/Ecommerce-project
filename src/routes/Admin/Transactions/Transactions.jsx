@@ -10,7 +10,7 @@ function Transactions() {
           Completed
         </Link>
         <Link to={"in-progress-transactions"} className={styles.tabButton}>
-          In progress
+          In Progress
         </Link>
         <Link to={"pending-transactions"} className={styles.tabButton}>
           Pending

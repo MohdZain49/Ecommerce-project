@@ -39,6 +39,22 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "trending",
+        element: <Home />,
+      },
+      {
+        path: "home&living",
+        element: <Home />,
+      },
+      {
+        path: "new_releases",
+        element: <Home />,
+      },
+      {
+        path: "top_deals",
+        element: <Home />,
+      },
+      {
         path: "cart",
         element: <Cart />,
       },

@@ -1,7 +1,7 @@
 const DEFAULT_DATA = [
   [
     { id: 1, heading: "Revenue", value: 34000, percentage: 40, color: "blue" },
-    { id: 2, heading: "Users", value: 400, percentage: -14, color: "yellow" },
+    { id: 2, heading: "Users", value: 400, percentage: -14, color: "red" },
     {
       id: 3,
       heading: "Transaction",
@@ -29,7 +29,7 @@ const DEFAULT_DATA = [
     { id: 2, label: "mobile", percentage: 70, color: "red" },
     { id: 3, label: "earphone", percentage: 47, color: "blueviolet" },
     { id: 4, label: "tablet", percentage: 85, color: "green" },
-    { id: 5, label: "macbook", percentage: 100, color: "blue" },
+    { id: 5, label: "macbook", percentage: 70, color: "blue" },
     { id: 6, label: "speakers", percentage: 59, color: "yellow" },
   ],
 

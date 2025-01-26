@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-left: 20px; */
 }
 
 .appLogo {
@@ -47,7 +46,7 @@
 }
 
 .navbar a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #26262dcc;
 }
 
 .searchBar {
@@ -57,7 +56,7 @@
   height: 40px;
 }
 
-.searchBar div {
+.searchIcon {
   height: 20px;
   padding: 10px;
   box-sizing: content-box;

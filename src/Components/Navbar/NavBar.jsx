@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/app_logo.jpg";
+import logo from "../../assets/app_logo.png";
 import styles from "./Navbar.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { RiAdminLine } from "react-icons/ri";
@@ -21,14 +21,14 @@ function NavBar() {
       </div>
 
       <div className={styles.navbar}>
-        <Link>TRENDING</Link>
-        <Link>NEW RELEASES</Link>
-        <Link>HOME & LIVING</Link>
-        <Link>TOP DEALS</Link>
+        <Link to='/trending'>TRENDING</Link>
+        <Link to={'/new_releases'}>NEW RELEASES</Link>
+        <Link to={'/home&living'}>HOME & LIVING</Link>
+        <Link to={'/top_deals'}>TOP DEALS</Link>
       </div>
 
       <div className={styles.searchBar}>
-        <div>
+        <div className={styles.searchIcon}>
           <IoSearch />
         </div>
         <input
